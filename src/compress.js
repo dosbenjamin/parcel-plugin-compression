@@ -21,6 +21,9 @@ const extensionsToCompress = [
   'htm',
   'map',
   'xml',
+  'eot',
+  'otf',
+  'ttf'
 ];
 
 const compress = outDir => {
@@ -96,7 +99,7 @@ const resultTotal = (totalBytes, totalBytesCompressed) => `${chalk.bold(
   totalBytes,
   totalBytesCompressed,
 )} from ${chalk.red.bold(filesize(totalBytes))}
-  
+
 `;
 
 const getCompressedPercent = (fileSizeInBytes, fileSizeInBytesCompressed) =>
